@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Context } from "./Context";
+import { Context } from "./context";
 
 export const Provider = ({ children }) => {
     const [data, setData] = useState({ items: [] })
     const [open, setOpen] = useState(true);
     const [user, setUser] = useState("");
-    const [repo,setRepo] = useState("");
+    const [repo, setRepo] = useState("");
+    const [loading, setLoading] = useState(false);
 
     return <Context.Provider value={{
         user,
@@ -15,6 +16,8 @@ export const Provider = ({ children }) => {
         data,
         setData,
         open,
-        setOpen
+        setOpen,
+        loading,
+        setLoading
     }}>{children}</Context.Provider>
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "./GitHub-logo.png"
+import logo from "../../assets/GitHub-logo.png"
 
 export const Logo = () =>
     <a href="/" className="flex w-20 h-fit srink-0 rounded-md">

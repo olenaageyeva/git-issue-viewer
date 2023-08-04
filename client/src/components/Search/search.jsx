@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { Context } from "../Context/Context";
-import { Logo } from "../Logo/logo"
+import { Context } from "../Context/context";
+import { Logo } from "../Icons/logo"
 
 export const Search = ({ handleSearch }) => {
     const {user, setUser, repo, setRepo} = useContext(Context);

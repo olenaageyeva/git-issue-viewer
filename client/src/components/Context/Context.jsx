@@ -8,7 +8,9 @@ const defaultContext = {
     open: true,
     setOpen: (value) => { },
     data: {},
-    setData: (value) => { }
+    setData: (value) => { },
+    loading: false,
+    setLoading: (value) => { }
 }
 
 export const Context = createContext(defaultContext);

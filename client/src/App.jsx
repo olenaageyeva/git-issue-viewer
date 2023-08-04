@@ -1,5 +1,5 @@
-import { Viewer } from "./components/viewer/viewer"
-import { Provider } from "./components/Context/Provider"
+import { Viewer } from "./components/Viewer/viewer"
+import { Provider } from "./components/Context/provider"
 
 export default function App() {
 
