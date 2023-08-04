@@ -7,10 +7,11 @@ import { Context } from "../Context/Context";
 
 export const Viewer = () => {
     const { open, user, repo, data, setData } = useContext(Context);
+    const HOST = process.env.NODE_ENV === 'production' ? 'https://api-express-backend.onrender.com' : ''
 
     const handleSearch = async () => {
         if (user && repo) {
-            const res = await axios.get(`/api/express_backend`, { params: { user, repo, open: open ? "open" : "closed" } })
+            const res = await axios.get(`${HOST}/api/express_backend`, { params: { user, repo, open: open ? "open" : "closed" } })
             setData(res.data);
         }
     }
