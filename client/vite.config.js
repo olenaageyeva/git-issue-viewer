@@ -4,6 +4,12 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./tests/setup.js'],
+    testMatch: ['./tests/**/*.test.jsx'],
+    globals: true
+  },
   base: "git-issue-viewer",
   server: {
     proxy: {
@@ -15,5 +21,5 @@ export default defineConfig({
       }
     }
   },
- 
+
 })

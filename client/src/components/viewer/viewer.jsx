@@ -5,7 +5,7 @@ import { Results } from "../Results/results"
 import { Search } from "../Search/search"
 import { Context } from "../Context/context";
 
-export const Viewer = () => {
+export const Viewer = ({...rest}) => {
     const { open, user, repo, data, setData, setLoading } = useContext(Context);
     const HOST = process.env.NODE_ENV === 'production' ? 'https://api-express-backend.onrender.com' : ''
 
@@ -26,7 +26,7 @@ export const Viewer = () => {
 
 
     return (
-        <div className="bg-white w-screen h-fit flex-col divide-y divide-gray-100 mx-auto">
+        <div className="bg-white w-screen h-fit flex-col divide-y divide-gray-100 mx-auto" {...rest}>
             <Search handleSearch={handleSearch} />            
             <Results data={data} />
         </div>

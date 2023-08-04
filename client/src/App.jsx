@@ -4,8 +4,8 @@ import { Provider } from "./components/Context/provider"
 export default function App() {
 
   return (
-    <Provider>
-      <Viewer />
+    <Provider>     
+      <Viewer data-testid='viewer'/>
     </Provider>
   )
 }
