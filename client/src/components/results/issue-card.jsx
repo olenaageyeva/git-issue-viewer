@@ -9,7 +9,7 @@ export const IssueCard = ({ id, title, html_url, created_at, user, labels, comme
     <div className="flex-auto px-4 py-2">
         <div className="flex justify-between">
             <div className="flex gap-2">
-                <a className="flex-auto text-lg font-semibold text-gray-900 " href={html_url}>
+                <a className="flex-auto text-lg font-semibold text-gray-900 " href={html_url} target="_blank">
                     {title}
                 </a>
                 {!!labels.length && <span className="bg-purple-200 text-xs rounded-lg px-1 leading-6 py-0"> {labels[0]?.name}</span>}
