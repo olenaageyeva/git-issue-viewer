@@ -18,6 +18,6 @@ export const IssueCard = ({ id, title, html_url, created_at, user, labels, comme
                 {comments}
             </a>
         </div>
-        <p className="text-sm">{`#${number} created ${getTimeAgoString(new Date(created_at))} by`} <a href={user.url} target="_blank" className="font-medium">{user.login}</a></p>
+        <p className="text-sm">{`#${number} created ${getTimeAgoString(new Date(created_at))} by`} <a href={user.html_url} target="_blank" className="font-medium">{user.login}</a></p>
     </div>
 </div>
