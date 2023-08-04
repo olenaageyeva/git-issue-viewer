@@ -6,8 +6,8 @@ import { Loader } from "../Loader/loader";
 
 
 
-export const Results = ({ data = {} }) => {
-    const { open, setOpen, loading } = useContext(Context);
+export const Results = () => {
+    const { open, setOpen, loading, data } = useContext(Context);
 
     return < main className="w-full flex-col  p-8 m-4 divide-y divide-gray-600 p-4 bg-slate-50 rounded-md shadow" >
         <h3 className="flex gap-2 text-m font-semibold my-auto">

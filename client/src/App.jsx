@@ -3,9 +3,11 @@ import { Provider } from "./components/Context/provider"
 
 export default function App() {
 
-  return (
+  return (    
     <Provider>     
-      <Viewer data-testid='viewer'/>
+      <div data-testid='app'>
+      <Viewer/>
+      </div>
     </Provider>
   )
 }
