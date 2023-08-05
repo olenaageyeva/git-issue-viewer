@@ -10,7 +10,9 @@ const defaultContext = {
     data: {},
     setData: (value) => { },
     loading: false,
-    setLoading: (value) => { }
+    setLoading: (value) => { },
+    selected: "",
+    setSelected: (value) => { },
 }
 
 export const Context = createContext(defaultContext);
