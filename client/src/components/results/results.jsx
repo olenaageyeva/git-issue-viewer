@@ -11,7 +11,7 @@ export const Results = () => {
 
     return < main className="w-full flex-col m-4 divide-y divide-gray-600 p-4 bg-slate-50 rounded-md shadow" >
         <h3 className="flex gap-2 text-m font-semibold my-auto">
-            <IssueIcon />  {!loading && <p>{data?.total_count} {open ? "Open" : "Closed"}</p>
+            <IssueIcon />  {!loading && !!data.items.length && <p>{data?.total_count} {open ? "Open" : "Closed"}</p>
             }
             <input className="ml-10" type="checkbox" onChange={() => setOpen(!open)} /> Show closed
         </h3>

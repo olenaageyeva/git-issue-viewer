@@ -3,8 +3,10 @@ import { getTimeAgoString } from "../../utils/time-utils"
 import { IssueIcon } from "../Icons/issue-icon"
 import { CommentIcon } from "../Icons/comment-icon"
 import { Context } from "../Context/context";
-import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
+
+import { Label } from "./label";
+import { IssueContent } from "./issue-content";
+
 
 export const IssueCard = ({ id, title, body, html_url, created_at, user, labels, comments, number, avatar_url }) => {
     const { selected, setSelected } = useContext(Context);
@@ -21,7 +23,7 @@ export const IssueCard = ({ id, title, body, html_url, created_at, user, labels,
                     </a>
                     {!!labels.length &&
                         <div className="flex flex-wrap">
-                            {labels.map((label, index) => <span key={index} style={{ backgroundColor: "#" + label.color }} className="text-xs rounded-lg px-1 leading-4 py-0 h-4 whitespace-nowrap flex"> {label.name}</span>)}
+                            {labels.map((label, index) => <Label key={index} {...label} />)}
                         </div>
                     }
                 </div>
@@ -30,13 +32,7 @@ export const IssueCard = ({ id, title, body, html_url, created_at, user, labels,
                 </a>
             </div>
             {selected === id &&
-                <div className="flex">
-                    <img src={user.avatar_url} class="shadow-lg rounded-full w-10 h-10 align-middle border-none m-2" />
-                    <div className="overflow-auto" >
-                        <p className="text-sm"><a href={user.html_url} target="_blank" className="font-medium">{user.login}</a> {`commented ${getTimeAgoString(new Date(created_at))}`} </p>
-                        <ReactMarkdown rehypePlugins={[rehypeRaw]} children={body} className="flex flex-col overflow-auto w-5/6" />
-                    </div>
-                </div>
+                <IssueContent body={body} created_at={created_at} {...user} />
             }
             <p className="text-sm">{`#${number} created ${getTimeAgoString(new Date(created_at))} by`} <a href={user.html_url} target="_blank" className="font-medium">{user.login}</a></p>
         </div>
