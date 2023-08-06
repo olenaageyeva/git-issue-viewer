@@ -13,6 +13,8 @@ const defaultContext = {
     setLoading: (value) => { },
     selected: "",
     setSelected: (value) => { },
+    error: "",
+    setError: (value) => { }
 }
 
 export const Context = createContext(defaultContext);

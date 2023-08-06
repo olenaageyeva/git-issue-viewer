@@ -8,6 +8,7 @@ export const Provider = ({ children }) => {
     const [repo, setRepo] = useState("");
     const [loading, setLoading] = useState(false);
     const [selected, setSelected] = useState(null);
+    const [error, setError] = useState(null);
 
     return <Context.Provider value={{
         user,
@@ -21,6 +22,8 @@ export const Provider = ({ children }) => {
         loading,
         setLoading,
         selected,
-        setSelected
+        setSelected,
+        error,
+        setError
     }}>{children}</Context.Provider>
 }
