@@ -27,6 +27,7 @@ app.get('/api/express_backend', async (req, res) => {
         const response = await axios.get(fullUrl, { headers })
         res.send(response.data);
     } catch (err) {
-        console.log("Error", err)
+        console.log("Error", err.response.status)       
+        res.status(err.response.status).send(err.message);
     }
 }); 
