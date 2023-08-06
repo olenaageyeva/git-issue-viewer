@@ -11,6 +11,6 @@ describe('App', () => {
   });
   it('renders Viewer with proper class and title', () => {    
     expect(screen.getByTestId("viewer")).toBeInTheDocument();    
-    expect(screen.getByText("Github Issues Viewer")).toBeInTheDocument();
+    expect(screen.getByText("GitHub Issue Viewer")).toBeInTheDocument();
   });
 });
