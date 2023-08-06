@@ -11,14 +11,14 @@ import { IssueContent } from "./issue-content";
 export const IssueCard = ({ id, title, body, html_url, created_at, user, labels, comments, number, avatar_url }) => {
     const { selected, setSelected } = useContext(Context);
 
-    return <div key={id} className="w-full flex  hover:bg-slate-200 animate-fadein p-2">
+    return <div key={id} className="flex w-100 hover:bg-slate-200 p-2">
         <div className="py-2 text-green-600 cursor-pointer" onClick={() => selected === id ? setSelected("") : setSelected(id)}>
             <IssueIcon />
         </div>
-        <div className="px-2 w-full">
+        <div className="px-2 w-[98%]">
             <div className="flex justify-between">
                 <div className="flex gap-2">
-                    <a className="flex-auto font-semibold text-gray-900 " href={html_url} target="_blank">
+                    <a className="flex flex-wrap font-semibold text-gray-900 " href={html_url} target="_blank">
                         {title}
                     </a>
                     {!!labels.length &&

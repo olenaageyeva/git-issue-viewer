@@ -31,7 +31,7 @@ export const Search = () => {
 
     return <header className="flex justify-between p-4">
         <Logo />
-        <p className="my-auto font-semibold mr-10">GitHubIssue Viewer</p>
+        <p className="my-auto font-semibold mr-10">GitHub Issue Viewer</p>
         <form onSubmit={(e) => { e.preventDefault(); handleSearch() }} className="flex flex-auto w-fit gap-4" >
 
             <input className="text-sm text-gray-900 placeholder-gray-400 rounded-md pl-3 ring-1 ring-gray-200 shadow-sm " type="text" placeholder="Enter user..." value={user} onChange={(e) => setUser(e.target.value)} />

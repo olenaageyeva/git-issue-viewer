@@ -9,7 +9,7 @@ import { Loader } from "../Loader/loader";
 export const Results = () => {
     const { open, setOpen, loading, data, error } = useContext(Context);
 
-    return < main className="w-full min-w-24 flex-col m-4 divide-y divide-gray-600 p-4 bg-slate-50 rounded-md shadow" >
+    return < main className="w-full flex-col divide-y divide-gray-600 p-4 bg-slate-50 rounded-md shadow" >
         <h3 className="flex gap-2">
             <IssueIcon />  {!loading && !!data?.items?.length && <p>{data?.total_count} {open ? "Open" : "Closed"}</p>
             }
