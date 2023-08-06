@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    minWidth:{
+      '800': '800px'
+    },
     extend: {},
   },
   plugins: [],

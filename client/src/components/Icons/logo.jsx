@@ -2,6 +2,5 @@ import React from "react"
 import logo from "../../assets/GitHub-logo.png"
 
 export const Logo = () =>
-    <a href="/" className="flex w-20 h-fit srink-0 rounded-md">
-        <img className="mx-4" src={logo} alt="github" />
-    </a>
+    <img className="w-20" src={logo} alt="github" />
+

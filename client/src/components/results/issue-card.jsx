@@ -27,7 +27,7 @@ export const IssueCard = ({ id, title, body, html_url, created_at, user, labels,
                         </div>
                     }
                 </div>
-                <a href={html_url} target="_blank" className="flex w-10 gap-2 text-sm ml-2"><CommentIcon />
+                <a href={html_url} target="_blank" className="flex gap-2 text-sm ml-2"><CommentIcon />
                     {comments}
                 </a>
             </div>
